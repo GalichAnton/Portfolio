@@ -1,10 +1,12 @@
 import React from "react";
-import Header from "../components/Header/Header";
-import { Outlet } from "react-router-dom";
-import Footer from "../components/Footer/Footer";
+import Header from "../../components/Header/Header";
+import { Outlet, useLocation } from "react-router-dom";
+import Footer from "../../components/Footer/Footer";
 import { Box } from "@chakra-ui/react";
-import { DottedSvgs } from "../components/DottsSvg/Dotts";
+import { DottedSvgs } from "../../components/DottsSvg/Dotts";
+import Home from "../../components/Home/Home";
 const Layout = () => {
+  const location = useLocation();
   return (
     <>
       <Header />
@@ -17,7 +19,7 @@ const Layout = () => {
         mx="auto"
       >
         <Box pt={10} pb={10}>
-          <Outlet />
+          {location.pathname === "/" ? <Home /> : <Outlet />}
         </Box>
       </Box>
       <Footer />

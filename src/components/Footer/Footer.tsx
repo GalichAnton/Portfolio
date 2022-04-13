@@ -43,7 +43,7 @@ const Footer = () => {
           fontSize="sm"
           color={useColorModeValue("gray.500", "gray.200")}
         >
-          © {new Date().getFullYear()} Muhammad Ahmad{" "}
+          © {new Date().getFullYear()} Galich Anton{" "}
         </Text>
         <Box textAlign="center">
           {myConfig.author.accounts.map((sc, index) => (

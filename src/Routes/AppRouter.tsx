@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "../Pages/Layout";
+import Layout from "../Pages/Layouts/Layout";
 import { LocalPaths } from "../Paths/LocalPath";
 import AboutPage from "../Pages/AboutPage";
-import ProjectsPage from "../Pages/ProjectsPage";
+import ProjectsPage from "../Pages/ProjectsPage/ProjectsPage";
 
 const AppRouter = () => {
   return (
