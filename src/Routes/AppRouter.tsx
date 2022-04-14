@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 import Layout from "../Pages/Layouts/Layout";
 import { LocalPaths } from "../Paths/LocalPath";
 import ProjectsPage from "../Pages/ProjectsPage/ProjectsPage";
@@ -10,7 +10,7 @@ import LinksPage from "../Pages/LinksPage/LinksPage";
 
 const AppRouter = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path={"/"} element={<Layout />}>
           <Route path={LocalPaths.about} element={<AboutPage />} />
@@ -20,7 +20,7 @@ const AppRouter = () => {
           <Route path={LocalPaths.interesting} element={<LinksPage />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
