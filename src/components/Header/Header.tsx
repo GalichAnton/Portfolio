@@ -105,11 +105,7 @@ export default function Header() {
                 <Avatar size={"sm"} src={UserIcon} />
               </RouterNavLink>
             </Box>
-            <HStack
-              as={"nav"}
-              spacing={4}
-              display={{ base: "none", md: "flex" }}
-            >
+            <Box as={"nav"} display={{ base: "none", md: "flex" }}>
               {webLinks.map((link, index) => (
                 <NavLink
                   key={index}
@@ -136,7 +132,11 @@ export default function Header() {
                   Links
                 </MenuButton>
                 <MenuList zIndex={5}>
-                  <Link as={RouterNavLink} to={LocalPaths.techStack}>
+                  <Link
+                    as={RouterNavLink}
+                    to={LocalPaths.techStack}
+                    style={{ margin: 0 }}
+                  >
                     <MenuItem>
                       <HStack>
                         <Icon
@@ -174,7 +174,7 @@ export default function Header() {
                   </Link>
                 </MenuList>
               </Menu>
-            </HStack>
+            </Box>
           </HStack>
           <Flex alignItems={"center"}>
             <Tooltip label={"Github account"} aria-label="A tooltip">

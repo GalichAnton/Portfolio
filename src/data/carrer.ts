@@ -1,5 +1,5 @@
 import simbirsoft from "../assets/images/carrer/SimbirSoft.png";
-import everland from "../assets/images/carrer/logo_evland.png";
+import everland from "../assets/images/carrer/everland.png";
 import itincubator from "../assets/images/skills/itincubator.png";
 import javascript from "../assets/images/skills/javascript.png";
 import react from "../assets/images/skills/react.png";
@@ -10,7 +10,7 @@ import html from "../assets/images/skills/html.jpg";
 import heroku from "../assets/images/skills/heroku.png";
 import figma from "../assets/images/skills/figma.png";
 import webstorm from "../assets/images/skills/WebStorm_Icon.png";
-
+import spbpu from "../assets/images/carrer/unnamed.jpg";
 export const companies = [
   {
     title: "SimbirSoft",
@@ -21,14 +21,6 @@ export const companies = [
     logo: simbirsoft,
   },
   {
-    title: "IT-Incubator",
-    alt: "PS image",
-    role: "Student frontend developer",
-    skills: ["react", "typescript", "redux", "CS"],
-    period: "02.2022 - 07.2022",
-    logo: itincubator,
-  },
-  {
     title: "Everland",
     alt: "BT image",
     role: "Layout designer",
@@ -37,8 +29,36 @@ export const companies = [
     logo: everland,
   },
 ];
-
-export const skillsArray = [
+export const institutes = [
+  {
+    short_title: "IT-Incubator",
+    title: "IT-community for learning frontend development",
+    alt: "Nuces image",
+    role: "Frontend dev",
+    skills: ["react", "javascript", "typescript", "redux"],
+    period: "02.2022 - 07.2022",
+    startingYear: "2022",
+    logo: itincubator,
+  },
+  {
+    short_title: "SPbPU",
+    title: "Peter the Great St.Petersburg Polytechnic University",
+    alt: "Nuces image",
+    role: "Nuclear power plant operation engineer",
+    skills: ["physics", "nuclear physics", "mathematics"],
+    period: "2016 - 2021",
+    startingYear: "2016",
+    logo: spbpu,
+  },
+];
+export interface ISkill {
+  name: string;
+  description: string;
+  link: string;
+  type: string;
+  image: string;
+}
+export const skillsArray: ISkill[] = [
   {
     name: "Java Script",
     description: "Web development",
