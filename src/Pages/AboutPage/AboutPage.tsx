@@ -8,6 +8,7 @@ import {
   Image,
   useColorMode,
   useColorModeValue,
+  Tag,
 } from "@chakra-ui/react";
 import { FaGraduationCap } from "react-icons/fa";
 import { BsFillBriefcaseFill } from "react-icons/bs";
@@ -20,7 +21,7 @@ import { MotionBox } from "../../components/Animation/Motion/Motion";
 import { companies, institutes } from "../../data/carrer";
 import Header from "../../components/Title/HeaderTitle";
 import PageLayout from "../Layouts/PageLayout";
-import { Tags } from "../../components/Tags/Tags";
+import { getTagColor } from "../../style/theme";
 
 interface CardProps {
   title: string;
@@ -80,15 +81,16 @@ const Card = (props: CardProps) => {
                 alignItems="center"
                 display={["none", "none", "flex", "flex"]}
               >
-                <Tags
-                  tags={skills}
-                  interactive={false}
-                  tagProps={{
-                    colorScheme: "gray",
-                    padding: "0 3px",
-                    size: "sm",
-                  }}
-                />
+                {skills.map((skill) => (
+                  <Tag
+                    size="sm"
+                    padding="0 3px"
+                    key={skill}
+                    colorScheme={getTagColor(skill)}
+                  >
+                    {skill}
+                  </Tag>
+                ))}
               </Stack>
             </Stack>
           </Flex>
@@ -105,15 +107,16 @@ const Card = (props: CardProps) => {
           alignItems="center"
           display={["flex", "flex", "none", "none"]}
         >
-          <Tags
-            tags={skills}
-            interactive={false}
-            tagProps={{
-              colorScheme: "gray",
-              padding: "0 3px",
-              size: "sm",
-            }}
-          />
+          {skills.map((skill) => (
+            <Tag
+              size="sm"
+              padding="0 3px"
+              key={skill}
+              colorScheme={getTagColor(skill)}
+            >
+              {skill}
+            </Tag>
+          ))}
         </Stack>
       </Box>
     </CardTransition>

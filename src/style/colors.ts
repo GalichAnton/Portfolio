@@ -55,7 +55,6 @@ export const colors = {
     900: "#000d21",
   },
   accent: {
-    // See src/components/Accent.tsx for CSS variable definition
     50: "var(--colors-accent-50)",
     100: "var(--colors-accent-100)",
     200: "var(--colors-accent-200)",

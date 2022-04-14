@@ -39,7 +39,7 @@ const mobileLinks = [
   { name: "About", path: LocalPaths.about },
   { name: "Projects", path: LocalPaths.projects },
   { name: "Tech Stack", path: LocalPaths.techStack },
-  { name: "Developer Story", path: LocalPaths.devStory },
+  { name: "Interesting links", path: LocalPaths.interesting },
 ];
 
 interface NavLinkProps {
@@ -148,7 +148,7 @@ export default function Header() {
                       </HStack>
                     </MenuItem>
                   </Link>
-                  <Link as={RouterNavLink} to={LocalPaths.devStory}>
+                  <Link as={RouterNavLink} to={LocalPaths.interesting}>
                     <MenuItem>
                       <HStack>
                         <Icon
@@ -156,7 +156,7 @@ export default function Header() {
                           size={18}
                           color={useColorModeValue("blue.500", "blue.200")}
                         />
-                        <Text>Developer Story</Text>
+                        <Text>Interesting links</Text>
                       </HStack>
                     </MenuItem>
                   </Link>

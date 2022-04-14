@@ -28,7 +28,6 @@ const LinksPage = () => {
     const searchContent = data.title + data.description;
     return searchContent.toLowerCase().includes(searchValue.toLowerCase());
   });
-  filteredLinks?.sort((a, b) => +new Date(b.addedAt) - +new Date(a.addedAt));
 
   return (
     <Fragment>

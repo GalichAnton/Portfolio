@@ -162,11 +162,15 @@ export const getTagColor = (type: string) => {
   type = type.toLowerCase();
   if (type === "react") {
     return "cyan";
-  } else if (type === "javascript") {
+  } else if (type === "javascript" || type === "documentation") {
     return "yellow";
-  } else if (type === "typescript" || type === "tailwindcss") {
+  } else if (
+    type === "typescript" ||
+    type === "tailwindcss" ||
+    type === "tutorial"
+  ) {
     return "blue";
-  } else if (type === "chakraui" || type === "css") {
+  } else if (type === "chakraui" || type === "css" || type === "book") {
     return "teal";
   }
 };
