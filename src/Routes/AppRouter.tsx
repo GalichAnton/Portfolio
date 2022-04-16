@@ -1,13 +1,15 @@
-import React from "react";
+import React, { lazy } from "react";
 import { Routes, Route, HashRouter } from "react-router-dom";
 import Layout from "../Pages/Layouts/Layout";
 import { LocalPaths } from "../Paths/LocalPath";
-import ProjectsPage from "../Pages/ProjectsPage/ProjectsPage";
-import AboutPage from "../Pages/AboutPage/AboutPage";
-import TechStack from "../Pages/TechsPage/TechsPage";
-import AchievementPage from "../Pages/AchivementPage/AchievementPage";
-import LinksPage from "../Pages/LinksPage/LinksPage";
+const ProjectsPage = lazy(() => import("../Pages/ProjectsPage/ProjectsPage"));
+const AboutPage = lazy(() => import("../Pages/AboutPage/AboutPage"));
+const TechStack = lazy(() => import("../Pages/TechsPage/TechsPage"));
+const AchievementPage = lazy(
+  () => import("../Pages/AchivementPage/AchievementPage")
+);
 
+const LinksPage = lazy(() => import("../Pages/LinksPage/LinksPage"));
 const AppRouter = () => {
   return (
     <HashRouter>
